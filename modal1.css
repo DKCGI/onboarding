@@ -1,0 +1,38 @@
+#modal1 {
+  font-family: "Poppins", sans-serif;
+  z-index: 1600;
+}
+#modal1 .modal-dialog {
+  max-width: 420px;
+}
+
+.modal-backdrop {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.modal-backdrop + .modal-backdrop {
+  z-index: 1550;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal1 .mail-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#modal1 .mail-icon svg {
+  transform: scale(250%);
+}
+#modal1 #coin {
+  width: 65px;
+  display: block;
+  margin: auto;
+}
+
+#modal1 a {
+  text-decoration: none;
+  color: #6e70d6;
+}

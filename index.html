@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link type="text/css" rel="stylesheet" href="modal1.css" />
+    <link type="text/css" rel="stylesheet" href="modal2.css" />
+  </head>
+  <body
+    style="
+      background-image: url(https://smrty.s3.us-west-1.amazonaws.com/smarty_brand_assets/coin.png);
+    "
+  >
+    <!-- <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#modal2"
+    >
+      Open Modal
+    </button> -->
+
+    <div
+      class="modal fade"
+      id="modal2"
+      tabindex="-1"
+      data-backdrop="static"
+      role="dialog"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-2">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+
+            <div class="text-large my-3 px-5 text-center">
+              <h2>Start Earning Rewards With These Simple Steps</h2>
+              <strong>Claim your next gift card with just a few clicks!</strong>
+            </div>
+
+            <div class="onboarding-offers">
+              <div class="onboarding-offer">
+                <div class="row1">
+                  <div>
+                    <div class="mail-icon"></div>
+                    <strong class="mx-3">Verify Your Email</strong>
+                  </div>
+                  <div class="reward">
+                    <img
+                      width="30"
+                      src="https://smrty.s3.us-west-1.amazonaws.com/smarty_brand_assets/coin.svg"
+                    />
+                    Earn $1
+                  </div>
+                </div>
+                <div class="row2">
+                  Click the verification link in your mailbox.
+                </div>
+              </div>
+              <div class="onboarding-offer">
+                <div class="row1">
+                  <div>
+                    <div class="survey-icon"></div>
+                    <strong class="mx-3">Complete the onboarding survey</strong>
+                  </div>
+                  <div class="reward">
+                    <img
+                      width="30"
+                      src="https://smrty.s3.us-west-1.amazonaws.com/smarty_brand_assets/coin.svg"
+                    />
+                    Earn $1.50
+                  </div>
+                </div>
+                <div class="row2">Tell us a little about yourself.</div>
+              </div>
+              <div class="onboarding-offer">
+                <div class="row1">
+                  <div>
+                    <div class="survey-icon"></div>
+                    <strong class="mx-3">Adscend SoFi or offertoro</strong>
+                  </div>
+                  <div class="reward">
+                    <img
+                      width="30"
+                      src="https://smrty.s3.us-west-1.amazonaws.com/smarty_brand_assets/coin.svg"
+                    />
+                    Earn $6.30
+                  </div>
+                </div>
+                <div class="row2">324494</div>
+              </div>
+              <div class="onboarding-offer">
+                <div class="row1">
+                  <div>
+                    <div class="survey-icon"></div>
+                    <strong class="mx-3">Chime Offer</strong>
+                  </div>
+                  <div class="reward">
+                    <img
+                      width="30"
+                      src="https://smrty.s3.us-west-1.amazonaws.com/smarty_brand_assets/coin.svg"
+                    />
+                    Earn $1
+                  </div>
+                </div>
+                <div class="row2">256734 for android or 256682 for ios</div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="continue-button my-4"
+              data-bs-dismiss="modal"
+            >
+              <!-- You might need to change data-bs-dismiss to just data-dismiss (I think this is a later version of bootstrap) -->
+              Continue to Smarty
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modal1"
+      tabindex="-1"
+      data-backdrop="static"
+      role="dialog"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-2">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+
+            <div class="mail-icon"></div>
+
+            <div class="text-large my-3 px-3">
+              <p class="text-center fw-bold">
+                Check your mailbox for the verification link to earn your first
+                5 coins
+              </p>
+            </div>
+
+            <img
+              id="coin"
+              src="https://smrty.s3.us-west-1.amazonaws.com/smarty_brand_assets/coin.png"
+            />
+
+            <p class="small mt-3 mx-5 mb-3 mb-0 text-center">
+              Didn't receive verification email?
+              <!-- todo: resend link -->
+              <strong><a href="">Resend</a></strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module">
+      //modal1
+      import { Icon } from "./icons.js";
+
+      var myModal = new bootstrap.Modal(document.getElementById("modal1"), {});
+
+      myModal.toggle();
+
+      function getIcon(...val) {
+        return Icon(...val);
+      }
+
+      document.querySelector("#modal1 .mail-icon").innerHTML = getIcon(
+        "email",
+        "#262E6B"
+      );
+      document.querySelector("#modal2 .mail-icon").innerHTML = getIcon(
+        "email",
+        "#222"
+      );
+      document.querySelectorAll("#modal2 .survey-icon").forEach((icon) => {
+        icon.innerHTML = getIcon("survey", "#222");
+      });
+    </script>
+
+    <script type="module">
+      //modal2
+
+      var myModal = new bootstrap.Modal(document.getElementById("modal2"), {});
+      myModal.toggle();
+    </script>
+  </body>
+</html>
